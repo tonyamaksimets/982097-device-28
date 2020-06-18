@@ -1,0 +1,595 @@
+/*Fonts*/
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroyextrabold.woff2') format('woff2'),
+       url('../fonts/gilroyextrabold.woff') format('woff');
+  font-style: normal;
+  font-weight: 800;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/gilroylight.woff2') format('woff2'),
+       url('../fonts/gilroylight.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensans.woff2') format('woff2'),
+       url('../fonts/opensans.woff') format('woff');
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url('../fonts/opensanslight.woff2') format('woff2'),
+       url('../fonts/opensanslight.woff') format('woff');
+  font-style: normal;
+  font-weight: 300;
+}
+
+/*Variables*/
+:root{
+  --basic-black: #000000;
+  --basic-black-transparent: rgba(0, 0, 0, 0.3);
+  --basic-dark: #363636;
+  --basic-gray: #464646;
+  --basic-half-gray: #7e7e7e;
+  --basic-gray-light: #e5e5e5;
+  --basic-white: #ffffff;
+  --basic-white-transparent: rgba(255, 255, 255, 0.3);
+
+  --special-yellow-dark: #f0c52e;
+  --special-yellow: #f7e296;
+  --special-green: #91c92f;
+  --special-pink: #f6dada;
+
+  --form-gray-light: #dcdcdc;
+  --form-gray: #a6a6a6;
+
+  --pagination-gray: #ebebeb;
+  --pagination-gray-dark: #d9d9d9;
+
+}
+
+/*Global*/
+body {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 28px;
+  color: var(--basic-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/*Headline*/
+.headline {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 47px;
+  line-height: 58px;
+}
+
+.section-caption,
+.service-caption {
+  letter-spacing: 0.2em;
+}
+
+/*Button*/
+.button {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--basic-black);
+
+  background-image: linear-gradient(var(--basic-white) 8px, var(--special-yellow-dark) 8px, var(--special-yellow-dark) 16px, var(--basic-white) 16px);
+  border: none;
+}
+
+.button:hover,
+.button:focus {
+  background-color: var(--special-yellow-dark);
+  background-image: none;
+}
+
+.button:active {
+  color: var(--basic-black-transparent);
+
+  background-color: var(--special-yellow-dark);
+  background-image: none;
+}
+
+.button-gray {
+  background-image: linear-gradient(var(--basic-gray-light) 8px, var(--special-yellow-dark) 8px, var(--special-yellow-dark) 16px, var(--basic-gray-light) 16px);
+}
+
+.button-tab:active {
+  color: var(--special-yellow);
+
+  background-color: var(--basic-black);
+  background-image: none;
+}
+
+/*Header*/
+.page-header {
+  background-color: var(--special-yellow);
+}
+
+.main-navigation {
+  line-height: 20px;
+}
+
+.search-form input {
+  background-color: var(--special-yellow);
+
+  border: none;
+}
+
+.search-input-text::placeholder {
+  color: var(--basic-black);
+
+  opacity: 0.3;
+}
+
+.search-input-text:hover::placeholder {
+  opacity: 0.6;
+}
+
+.search-input-text:focus::placeholder {
+  opacity: 1;
+}
+
+.search-form button {
+  display: none;
+
+  text-transform: uppercase;
+
+  background-color: var(--special-yellow);
+
+  border: none;
+}
+
+.search-form:focus-within button {
+  display: block;
+}
+
+.search-form button:hover,
+.search-form button:focus {
+  color: var(--basic-white);
+
+  background-color: var(--basic-black);
+}
+
+.search-form button:active {
+  color: var(--basic-white-transparent);
+
+  background-color: var(--basic-black);
+}
+
+.main-navigation ul {
+  list-style: none;
+}
+
+.main-navigation a[href] {
+  color: var(--basic-black);
+}
+
+.main-navigation a[href]:hover,
+.main-navigation a[href]:focus {
+  opacity: 0.6;
+}
+
+.main-navigation a[href]:active {
+  opacity: 0.3;
+}
+
+.site-navigation-item > a {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.sub-site-navigation {
+  display: none;
+}
+
+.item-catalog:hover .sub-site-navigation,
+.item-catalog:focus-within .sub-site-navigation {
+  display: block;
+}
+
+.user-navigation button {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+
+  border: none;
+  background-color: var(--special-yellow);
+
+  opacity: 0.3;
+}
+
+.user-navigation button:hover,
+.user-navigation button:focus {
+  opacity: 0.6;
+}
+
+.user-navigation button:active {
+  opacity: 0.1;
+}
+
+/*Promo-slider*/
+.promo-slider ul {
+  list-style: none;
+}
+
+.slider-text {
+  line-height: 20px;
+}
+
+.slider table {
+  font-family: Gilroy;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+}
+
+.slider-table-value {
+  font-size: 36px;
+  line-height: 42px;
+}
+
+.slider-table-description {
+  font-size: 13px;
+  line-height: 15px;
+}
+
+/*Product-categories*/
+.product-categories ul {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+
+  list-style: none;
+}
+
+.product-categories a {
+  color: var(--basic-black);
+}
+
+.product-categories a:active {
+  opacity: 0.3;
+}
+
+/*Services*/
+.services ul {
+  list-style: none;
+}
+
+.active-tab button:disabled {
+  color: var(--special-yellow);
+
+  background-color: var(--basic-black);
+  background-image: none;
+}
+
+.services p {
+  letter-spacing: 0.1em;
+}
+
+/*Partners*/
+.partners ul {
+  list-style: none;
+}
+
+/*info*/
+.info ul {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 16px;
+
+  list-style: none;
+}
+
+/*Breadcrumbs*/
+.breadcrumbs {
+  list-style: none;
+}
+
+.breadcrumbs a {
+  font-size: 14px;
+  line-height: 19px;
+  color: var(--basic-black);
+  opacity: 0.3;
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus {
+  opacity: 0.6;
+}
+
+.breadcrumbs a:active {
+  opacity: 0.1;
+}
+
+/*Filters*/
+.filters h2 {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  background-color: var(--form-gray-light);
+}
+
+.filters-form {
+  background-color: var(--basic-gray-light);
+}
+
+.filters-form ul {
+  list-style: none;
+}
+
+.filters-form fieldset {
+  border: none;
+}
+
+.filters-form legend {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.1em;
+}
+
+.filter-input-checkbox + label,
+.filter-input-radio + label {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.filter-input-checkbox:disabled + label,
+.filter-input-radio:disabled + label {
+  color: var(--form-gray);
+}
+
+/*Sort*/
+.sort {
+  background-color: var(--basic-gray-light);
+}
+
+.sort p {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sort-types a {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: normal;
+  color: var(--basic-black);
+
+  opacity: 0.3;
+}
+
+.sort-types a[href]:hover,
+.sort-types a[href]:focus {
+  opacity: 0.6;
+}
+
+.sort-types a[href]:active,
+.sort-types .active-sort-type {
+  opacity: 1;
+}
+
+/*Products*/
+.products ul {
+  list-style: none;
+}
+
+.product-name-link {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 0.05em;
+  color: var(--basic-black);
+}
+
+.product-name-link:hover h3,
+.product-name-link:focus h3 {
+  opacity: 0.6;
+}
+
+.product-name-link:active h3 {
+  opacity: 0.3;
+}
+
+.product-price {
+  font-family: Gilroy;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 0.05em;
+}
+
+.compare-button {
+  font-size: 13px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  color: var(--basic-black);
+
+  opacity: 0.5;
+
+  background-color: var(--basic-white);
+  border: none;
+}
+
+.compare-button:hover,
+.compare-button:focus {
+  opacity: 1;
+}
+
+.compare-button:active {
+  opacity: 0.2;
+}
+
+/*Pagination*/
+.pagination {
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pagination ul {
+  list-style: none;
+
+  background-color: var(--pagination-gray);
+}
+
+.pagination .page-number {
+  color: var(--basic-black);
+
+  opacity: 0.3;
+}
+
+.pagination .page-number[href]:hover,
+.pagination .page-number[href]:focus {
+  opacity: 0.6;
+}
+
+.pagination .page-number[href]:active,
+.pagination .active-page {
+  opacity: 1;
+}
+
+.pagination .pagination-direction {
+  color: var(--basic-black);
+  background-color: var(--pagination-gray);
+}
+
+.pagination .pagination-direction:hover,
+.pagination .pagination-direction:focus {
+  background-color: var(--pagination-gray-dark);
+}
+
+.pagination .pagination-direction:active {
+  color: var(--basic-black-transparent);
+}
+
+/*Footer*/
+.page-footer {
+  line-height: 20px;
+  color: var(--basic-white);
+
+  background-color: var(--basic-dark);
+}
+
+.page-footer ul {
+  list-style: none;
+}
+
+.page-footer a {
+  color: var(--basic-white);
+}
+
+.footer-user-navigation a {
+  opacity: 0.7;
+}
+
+.footer-user-navigation a:hover,
+.footer-user-navigation a:focus,
+.footer-user-navigation button:hover,
+.footer-user-navigation button:focus {
+  opacity: 1;
+}
+
+.footer-user-navigation a:active,
+.footer-user-navigation button:active {
+  opacity: 0.3;
+}
+
+.footer-user-navigation button {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-white);
+
+  border: none;
+  background-color: var(--basic-dark);
+
+  opacity: 0.7;
+}
+
+.footer-site-navigation {
+  font-family: 'Gilroy';
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.page-footer .logo:hover,
+.page-footer .logo:focus,
+.footer-site-navigation a:hover,
+.footer-site-navigation a:focus,
+.telephone:hover,
+.telephone:focus,
+.developer:hover,
+.developer:focus {
+  opacity: 0.6;
+}
+
+.page-footer .logo:active,
+.footer-site-navigation a:active,
+.telephone:active,
+.developer:active {
+  opacity: 0.3;
+}
+
+.social-button {
+  opacity: 0.3;
+}
+
+.social-button:hover,
+.social-button:focus {
+  opacity: 0.6;
+}
+
+.social-button:active {
+  opacity: 0.1;
+}
