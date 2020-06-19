@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Магазин электроники «Device»</title>
     <link rel="stylesheet" type="text/css" href="css/normalize.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
-  <body>
-    <header class="page-header">
+  <body class="page-body">
+    <header class="page-header container">
       <nav class="main-navigation">
         <a class="logo">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина электроники «Device»">
@@ -46,7 +46,7 @@
     </header>
 
     <main>
-      <section class="promo-slider">
+      <section class="promo-slider container">
         <h2 class="visually-hidden">Промо товаров</h2>
           <ul>
             <li class="slide">
@@ -122,7 +122,7 @@
           </ul>
       </section>
 
-      <section class="product-categories">
+      <section class="product-categories container">
         <h2 class="visually-hidden">Категории товаров</h2>
         <ul>
           <li><a href="virtualreality.html">Виртуальная реальность</a></li>
@@ -135,31 +135,38 @@
       </section>
 
       <section class="services">
-        <h2 class="visually-hidden">Сервисы</h2>
-        
-        <ul>
-          <li class="active-tab"><button class="button button-tab" type="button" disabled>Доставка</button></li>
-          <li><button class="button button-tab" type="button">Гарантия</button></li>
-          <li><button class="button button-tab" type="button">Кредит</button></li>
-        </ul>
+        <div class="container">
+          <h2 class="visually-hidden">Сервисы</h2>
+          <ul>
+            <li class="active-tab">
+              <button class="button button-gray button-tab" type="button" disabled>Доставка</button>
+            </li>
+            <li>
+              <button class="button button-gray button-tab" type="button">Гарантия</button>
+            </li>
+            <li>
+              <button class="button button-gray button-tab" type="button">Кредит</button>
+            </li>
+          </ul>
 
-        <ul>
-          <li>
-            <h3 class="headline service-caption">Доставка</h3>
-            <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
-          </li>
-          <li>
-            <h3 class="headline service-caption">Гарантия</h3>
-            <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
-          </li>
-          <li>
-            <h3 class="headline service-caption">Кредит</h3>
-            <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
-          </li>
-        </ul>
+          <ul>
+            <li>
+              <h3 class="headline service-caption">Доставка</h3>
+              <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+            </li>
+            <li>
+              <h3 class="headline service-caption">Гарантия</h3>
+              <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
+            </li>
+            <li>
+              <h3 class="headline service-caption">Кредит</h3>
+              <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
+            </li>
+          </ul>
+        </div>
       </section>
 
-      <section class="partners">
+      <section class="partners container">
         <h2 class="visually-hidden">Бренды-партнеры</h2>
         <ul>
           <li>
@@ -184,29 +191,31 @@
         </ul>
       </section>
 
-      <section class="info">
-        <h2 class="section-caption headline">О нас</h2>
+      <div class="container">
+        <section class="info">
+          <h2 class="section-caption headline">О нас</h2>
 
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
 
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+          </ul>
 
-        <a class="button" href="device-info.html">Подробнее о нас</a>
-      </section>
+          <a class="button" href="device-info.html">Подробнее о нас</a>
+        </section>
 
-      <section>
-        <h2 class="section-caption headline">Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <section>
+          <h2 class="section-caption headline">Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-        <a href="map.html"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
+          <a href="map.html"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
 
-        <a class="button" href="feedback.html">Напишите нам</a>
-      </section>
+          <a class="button" href="feedback.html">Напишите нам</a>
+        </section>
+      </div>
     </main>
 
     <footer class="page-footer">

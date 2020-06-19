@@ -74,6 +74,45 @@ img {
   height: auto;
 }
 
+/*Visually-hidden*/
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+}
+
+/*Grid*/
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+
+/*Container*/
+.container {
+  width: 1160px;
+
+  padding: 0 40px;
+  margin: 0 auto;
+}
+
+/*Clearfix*/
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 /*Headline*/
 .headline {
   font-family: 'Gilroy';
@@ -240,6 +279,10 @@ img {
 }
 
 /*Promo-slider*/
+.promo-slider {
+  background-image: linear-gradient(var(--special-yellow) 0, var(--special-yellow) 100px, var(--basic-white) 100px);
+}
+
 .promo-slider ul {
   list-style: none;
 }
@@ -284,6 +327,10 @@ img {
 }
 
 /*Services*/
+.services {
+  background-image: linear-gradient(var(--basic-white) 0, var(--basic-white) 100px, var(--basic-gray-light) 100px);
+}
+
 .services ul {
   list-style: none;
 }
@@ -334,20 +381,40 @@ img {
   opacity: 0.1;
 }
 
+/*Catalog-grid*/
+.catalog-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
 /*Filters*/
+.filters {
+  overflow: hidden;
+}
+
+.filters-caption-container {
+  background-color: var(--form-gray-light);
+}
+
+.filters-form-container {
+  height: 100%;
+
+  background-color: var(--basic-gray-light);
+}
+
 .filters h2 {
+  float: right;
+
   font-family: Gilroy;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-
-  background-color: var(--form-gray-light);
 }
 
 .filters-form {
-  background-color: var(--basic-gray-light);
+  float: right;
 }
 
 .filters-form ul {
@@ -378,8 +445,12 @@ img {
 }
 
 /*Sort*/
-.sort {
+.sort-container {
   background-color: var(--basic-gray-light);
+}
+
+.sort {
+  width: 760px;
 }
 
 .sort p {
@@ -413,6 +484,14 @@ img {
 /*Products*/
 .products ul {
   list-style: none;
+}
+
+.products-list {
+  width: 760px;
+
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
 }
 
 .product-name-link {
@@ -464,6 +543,8 @@ img {
 
 /*Pagination*/
 .pagination {
+  width: 760px;
+
   font-family: Gilroy;
   font-weight: 800;
   font-size: 16px;
