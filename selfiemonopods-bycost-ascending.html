@@ -21,19 +21,19 @@
         </form>
 
         <ul class="user-navigation">
-          <li>
+          <li class="authorization-item">
             <a href="profile.html">Валентин Петухов</a>
             <button type="button">Выйти</button></li>
-          <li>
+          <li class="compare-item">
             <a href="compare.html">Сравнить</a>
           </li>
-          <li>
+          <li class="shoppingcart-item">
             <a href="shoppingcart.html">Корзина</a>
           </li>
         </ul>
 
         <ul class="site-navigation">
-          <li class="site-navigation-item item-catalog">
+          <li class="site-navigation-item catalog-item">
             <a href="catalog.html">Каталог товаров</a>
             <ul class="sub-site-navigation">
               <li><a href="virtualreality.html">Виртуальная реальность</a></li>
@@ -124,7 +124,7 @@
                   </li>
                 </ul>
               </fieldset>
-              <button class="button button-gray" type="submit">Показать</button>
+              <button class="button" type="submit">Показать</button>
             </form>
           </div>
         </section>
@@ -229,54 +229,56 @@
     </main>
 
     <footer class="page-footer">
-      <a class="logo" href="index.html" aria-label="На главную">
-        <img src="img/colorlogo-device.svg" width="163" height="35" alt="Логотип магазина электроники «Device»">
-      </a>
+      <div class="container">
+        <ul class="footer-user-navigation">
+          <li class="footer-authorization-item inner-page">
+            <a class="footer-user-navigation-link" href="profile.html"><span>Валентин Петухов</span></a>
+            <button type="button">Выйти</button>
+          </li>
+          <li class="footer-compare-item">
+            <a class="footer-user-navigation-link" href="compare.html"><span>Сравнить</span></a>
+          </li>
+          <li class="footer-shoppingcart-item">
+            <a class="footer-user-navigation-link" href="shoppingcart.html"><span>Корзина</span></a>
+          </li>
+        </ul>
 
-      <ul class="footer-user-navigation">
-        <li>
-          <a href="profile.html">Валентин Петухов</a>
-          <button type="button">Выйти</button>
-        </li>
-        <li>
-          <a href="compare.html">Сравнить</a>
-        </li>
-        <li>
-          <a href="shoppingcart.html">Корзина</a>
-        </li>
-      </ul>
+        <a class="logo" href="index.html" aria-label="На главную">
+          <img src="img/colorlogo-device.svg" width="163" height="35" alt="Логотип магазина электроники «Device»">
+        </a>
 
-      <p>г. Москва, ул. Строителей, 15</p>
+        <p>г. Москва, ул. Строителей, 15</p>
 
-      <ul class="footer-site-navigation">
-        <li><a href="delivery.html">Доставка</a></li>
-        <li><a href="warranty.html">Гарантия</a></li>
-        <li><a href="contacts.html">Контакты</a></li>
-      </ul>
+        <ul class="footer-site-navigation">
+          <li><a href="delivery.html">Доставка</a></li>
+          <li><a href="warranty.html">Гарантия</a></li>
+          <li><a href="contacts.html">Контакты</a></li>
+        </ul>
 
-      <a class="telephone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        <a class="telephone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
 
-      <ul class="social">
-        <li>
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Facebook</span>
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Instagram</span>
-          </a>
-        </li>
-        <li>
-          <a class="social-button" href="#">
-            <span class="visually-hidden">Twitter</span>
-          </a>
-        </li>
-      </ul>
+        <ul class="social">
+          <li>
+            <a class="social-button social-facebook" href="#">
+              <span class="visually-hidden">Facebook</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button social-instagram" href="#">
+              <span class="visually-hidden">Instagram</span>
+            </a>
+          </li>
+          <li>
+            <a class="social-button social-twitter" href="#">
+              <span class="visually-hidden">Twitter</span>
+            </a>
+          </li>
+        </ul>
 
-      <a class="developer" href="https://htmlacademy.ru/intensive/htmlcss">
-        <span class="visually-hidden">HTML Academy</span>
-      </a>
+        <a class="developer" href="https://htmlacademy.ru/intensive/htmlcss">
+          <span class="visually-hidden">HTML Academy</span>
+        </a>
+      </div>
     </footer>
 
   </body>
