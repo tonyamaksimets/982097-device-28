@@ -330,7 +330,7 @@
           <h2 class="section-caption headline">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-          <a href="map.html"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
+          <a href="https://yandex.ru/maps/-/CCQhmZv7TB"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
 
           <a class="button" href="feedback.html">Напишите нам</a>
         </section>
@@ -389,17 +389,9 @@
       </div>
     </footer>
 
-    <section>
-      <h2 class="visually-hidden">Мы на карте</h2>
-      <img src="img/map-big.png" width="994" height="593" alt="Улица Строителей, 15">
-      <button type="button">
-        <span class="visually-hidden">Закрыть</span>
-      </button>
-    </section>
-
-    <section>
-      <h2>Напишите нам</h2>
-      <form action="https://echo.htmlacademy.ru" method="post">
+    <section class="feedback open-modal">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="feedback-name">Ваше имя:</label>
           <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
@@ -412,9 +404,19 @@
           <label for="feedback-message">Текст письма:</label>
           <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
         </p>
-        <button type="submit">Отправить</button>
+        <button class="button button-light" type="submit">Отправить</button>
       </form>
-      <button type="button">
+      <button class="button-close" type="button">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
+    </section>
+
+    <section class="map-modal">
+      <h2 class="visually-hidden">Мы на карте</h2>
+      <iframe src="https://yandex.ru/map-widget/v1/-/CCQhmZv73D" width="960" height="559" title="Магазин находится по адресу город Москва, Улица Строителей, строение 15"></iframe>
+      <img src="img/map-big.png" width="994" height="593" alt="Улица Строителей, строение 15">
+
+      <button class="button-close" type="button">
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>

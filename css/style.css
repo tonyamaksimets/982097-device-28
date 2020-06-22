@@ -48,11 +48,17 @@
   --special-green: #91c92f;
   --special-pink: #f6dada;
 
-  --form-gray-light: #dcdcdc;
-  --form-gray: #a6a6a6;
+  --filter-gray-light: #dcdcdc;
+  --filter-gray: #a6a6a6;
 
   --pagination-gray: #ebebeb;
   --pagination-gray-dark: #d9d9d9;
+
+  --shadow-black-transparent: rgba(0, 0, 0, 0.15);
+
+  --feedback-gray: #f2f2f2;
+  --feedback-gray-dark: #eaeaea;
+  --feedback-black-transparent: rgba(0, 0, 0, 0.4);
 
 }
 
@@ -165,6 +171,19 @@ img {
 
   background-color: var(--special-yellow-dark);
   background-image: none;
+}
+
+.button-light {
+  background-image: linear-gradient(var(--basic-transparent) 16px, var(--special-yellow) 16px, var(--special-yellow) 24px, var(--basic-transparent) 24px);
+}
+
+.button-light:hover,
+.button-light:focus {
+  background-color: var(--special-yellow);
+}
+
+.button-light:active {
+  background-color: var(--special-yellow);
 }
 
 .button-tab:active {
@@ -932,6 +951,8 @@ img {
 
 .info .button,
 .contacts .button {
+  width: 260px;
+
   position: absolute;
   bottom: 77px;
 }
@@ -969,7 +990,7 @@ img {
 }
 
 .filters-caption-container {
-  background-color: var(--form-gray-light);
+  background-color: var(--filter-gray-light);
 }
 
 .filters-form-container {
@@ -1017,7 +1038,7 @@ img {
 
 .filter-input-checkbox:disabled + label,
 .filter-input-radio:disabled + label {
-  color: var(--form-gray);
+  color: var(--filter-gray);
 }
 
 /*Sort*/
@@ -1390,4 +1411,213 @@ img {
 
 .developer::before {
   content: url(../img/logo-html.svg);
+}
+
+/*Feedback*/
+.feedback {
+  width: 760px;
+
+  margin: 0 auto;
+  padding-top: 92px;
+  padding-right: 100px;
+  padding-bottom: 60px;
+  padding-left: 100px;
+
+  display: none;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 300px;
+  z-index: 2;
+
+  box-shadow: 0px 10px 16px var(--shadow-black-transparent);
+
+  background-color: var(--basic-white);
+}
+
+.feedback-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 32px;
+  column-gap: 40px;
+
+  position: relative;
+}
+
+.feedback-form p {
+  margin: 0;
+}
+
+.feedback-form p:nth-child(3) {
+  grid-column: 1/-1;
+}
+
+.feedback-form label {
+  margin-bottom: 10px;
+
+  display: block;
+
+  font-family: Gilroy;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.feedback-form input {
+  height: 50px;
+}
+
+.feedback-form textarea {
+  height: 167px;
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 15px 20px;
+
+  background-color: var(--feedback-gray);
+
+  border: none;
+  outline: none;
+}
+
+.feedback-form input::placeholder,
+.feedback-form textarea::placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: var(--feedback-black-transparent);
+}
+
+.feedback-form input:hover,
+.feedback-form textarea:hover {
+  background-color: var(--feedback-gray-dark);
+}
+
+.feedback-form input:focus,
+.feedback-form textarea:focus {
+  padding: 13px 18px;
+
+  color: var(--basic-dark);
+
+  background-color: var(--basic-white);
+
+  border: 2px solid var(--special-yellow);
+}
+
+.feedback-form input:invalid,
+.feedback-form textarea:invalid {
+  background-color: var(--special-pink);
+}
+
+.feedback-form .button {
+  width: 200px;
+}
+
+.feedback .button-close {
+  top: 20px;
+  right: 20px;
+}
+
+/*Map-modal*/
+.map-modal {
+  width: 994px;
+
+  margin: 0 auto;
+
+  display: none;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 265px;
+  z-index: 2;
+}
+
+.map-modal .button-close {
+  top: 29px;
+  right: 36px;
+}
+
+.map-modal iframe {
+  position: absolute;
+  top: 7px;
+  left: 17px;
+
+  border: none;
+}
+
+/*Modal*/
+.open-modal {
+  display: block;
+  animation: floating 0.6s;
+}
+
+.error-modal {
+  animation: shake 0.6s;
+}
+
+.button-close {
+  width: 55px;
+  height: 55px;
+
+  position: absolute;
+  opacity: 0.5;
+
+  background-color: var(--special-yellow-dark);
+  border-radius: 50%;
+  border: none;
+}
+
+.button-close::before {
+  content: url(../img/cross.svg);
+
+  opacity: 0.7;
+
+  position: relative;
+  top: 1px;
+  left: 1px;
+}
+
+.button-close:hover,
+.button-close:focus {
+  opacity: 1;
+}
+
+.button-close:active {
+  opacity: 0.3;
+}
+
+/*Animation*/
+@keyframes floating {
+  0% {
+    transform: scaleY(0.2);
+  }
+
+  20% {
+    transform: scaleY(0.2);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
+
+@keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  20%, 60% {
+    transform: translateX(10px);
+  }
+
+  40%, 80% {
+    transform: translateX(-10px);
+  }
 }
