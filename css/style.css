@@ -481,7 +481,7 @@ img {
   display: none;
 }
 
-.active-slide {
+.current-slide {
   display: flex;
   justify-content: space-between;
 }
@@ -603,7 +603,7 @@ img {
   border-radius: 50%;
 }
 
-.active-control::before {
+.current-control::before {
   content: '';
   width: 4px;
   height: 4px;
@@ -751,7 +751,7 @@ img {
   box-sizing: content-box;
 }
 
-.active-tab .button:disabled {
+.current-tab .button:disabled {
   padding-right: 117px;
 
   color: var(--special-yellow);
@@ -770,7 +770,7 @@ img {
   position: relative;
 }
 
-.services-descriptions .active-service {
+.services-descriptions .current-service {
   display: block;
 }
 

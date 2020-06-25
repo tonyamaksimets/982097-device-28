@@ -49,7 +49,7 @@
       <section class="promo-slider container">
         <h2 class="visually-hidden">Промо товаров</h2>
           <ul class="slider">
-            <li class="slide active-slide">
+            <li class="slide current-slide">
               <div class="slide-column">
                 <img src="img/selfiestick-long.png" width="384" height="486" alt="Длинная палка для селфи">
               </div>
@@ -120,13 +120,13 @@
           <!-- Блок переключения слайдов -->
           <ul class="slider-controls">
             <li>
-              <button type="button" class="active-control" aria-label="Слайд 1"></button>
+              <button type="button" class="current-control slider-control" aria-label="Слайд 1"></button>
             </li>
             <li>
-              <button type="button" aria-label="Слайд 2"></button>
+              <button type="button" class="slider-control" aria-label="Слайд 2"></button>
             </li>
             <li>
-              <button type="button" aria-label="Слайд 3"></button>
+              <button type="button" class="slider-control" aria-label="Слайд 3"></button>
             </li>
           </ul>
       </section>
@@ -257,27 +257,27 @@
         <div class="container">
           <h2 class="visually-hidden">Сервисы</h2>
           <ul class="services-tabs">
-            <li class="active-tab">
+            <li class="current-tab service-tab">
               <button class="button button-tab" type="button" disabled>Доставка</button>
             </li>
-            <li>
+            <li class="service-tab">
               <button class="button button-tab" type="button">Гарантия</button>
             </li>
-            <li>
+            <li class="service-tab">
               <button class="button button-tab" type="button">Кредит</button>
             </li>
           </ul>
 
           <ul class="services-descriptions">
-            <li class="delivery active-service">
+            <li class="service delivery current-service">
               <h3 class="headline service-caption">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо к вашему<br>подъезду совершенно бесплатно! Ведь мы неплохо<br>заработаем, поднимая его на ваш этаж.</p>
             </li>
-            <li class="warranty">
+            <li class="service warranty">
               <h3 class="headline service-caption">Гарантия</h3>
               <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый.<br>Товар, не дом, конечно же.</p>
             </li>
-            <li class="credit">
+            <li class="service credit">
               <h3 class="headline service-caption">Кредит</h3>
               <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные<br>условия кредита. Выгодные для нашего банка, разумеется.</p>
             </li>
@@ -330,9 +330,9 @@
           <h2 class="section-caption headline">Контакты</h2>
           <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
 
-          <a href="https://yandex.ru/maps/-/CCQhmZv7TB"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
+          <a class="modal-map-link" href="https://yandex.ru/maps/-/CCQhmZv7TB"><img src="img/map.png" width="560" height="222" alt="Карта"></a>
 
-          <a class="button" href="feedback.html">Напишите нам</a>
+          <a class="button modal-feedback-link" href="feedback.html">Напишите нам</a>
         </section>
       </div>
     </main>
@@ -389,20 +389,20 @@
       </div>
     </footer>
 
-    <section class="feedback open-modal">
+    <section class="feedback">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
         <p>
           <label for="feedback-name">Ваше имя:</label>
-          <input id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
+          <input class="feedback-field-name" id="feedback-name" type="text" name="name" placeholder="Имя Фамилия">
         </p>
         <p>
           <label for="feedback-email">Ваш email:</label>
-          <input id="feedback-email" type="email" name="email" placeholder="email@example.com">
+          <input class="feedback-field-email" id="feedback-email" type="email" name="email" placeholder="email@example.com">
         </p>
         <p>
           <label for="feedback-message">Текст письма:</label>
-          <textarea id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
+          <textarea class="feedback-field-message" id="feedback-message" name="message" placeholder="В свободной форме"></textarea>
         </p>
         <button class="button button-light" type="submit">Отправить</button>
       </form>
@@ -420,5 +420,6 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
+    <script src="js/script.js"></script>
   </body>
 </html>
