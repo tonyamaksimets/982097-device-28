@@ -154,6 +154,7 @@ img {
   background-color: var(--basic-transparent);
   background-image: linear-gradient(var(--basic-transparent) 16px, var(--special-yellow-dark) 16px, var(--special-yellow-dark) 24px, var(--basic-transparent) 24px);
   border: none;
+  outline: none;
 }
 
 .button:hover,
@@ -202,10 +203,16 @@ img {
 }
 
 .main-navigation .logo {
+  width: 163px;
+
   margin-top: 19px;
   margin-bottom: 14px;
 
   display: block;
+}
+
+.logo img {
+  vertical-align: bottom;
 }
 
 .search-form {
@@ -250,6 +257,7 @@ img {
   background-color: var(--special-yellow);
 
   border: none;
+  outline: none;
 }
 
 .search-input-text::placeholder {
@@ -683,6 +691,19 @@ img {
   position: relative;
 }
 
+.product-categories p {
+  margin: 0;
+  padding: 0;
+}
+
+.product-category:focus  p {
+  outline: auto;
+}
+
+.product-category {
+  outline: none;
+}
+
 .product-category .category-image {
   height: 160px;
   width: 160px;
@@ -978,6 +999,10 @@ img {
   border-radius: 50%;
 }
 
+.contacts img {
+  vertical-align: bottom;
+}
+
 .info .button,
 .contacts .button {
   width: 260px;
@@ -1227,11 +1252,6 @@ img {
   border: none;
 }
 
-.filter-input-checkbox,
-.filter-input-radio {
-  display: none;
-}
-
 .filter-input-checkbox + label,
 .filter-input-radio + label {
   padding-left: 42px;
@@ -1249,33 +1269,49 @@ img {
 
 
 .filter-input-checkbox + label::before {
-  content: url(../img/checkbox-off.svg);
+  content: '';
+
+  width: 24px;
+  height: 24px;
+
+  display: block;
 
   position: absolute;
   top: -2px;
   left: 0;
+
+  background-image: url(../img/checkbox-off.svg);
 }
 
 .filter-input-checkbox:checked + label::before {
-  content: url(../img/checkbox-on.svg);
+  content: '';
+
+  background-image: url(../img/checkbox-on.svg);
 }
 
 .filter-input-radio + label::before {
-  content: url(../img/radio-off.svg);
+  content: '';
+
+  width: 24px;
+  height: 24px;
+
+  display: block;
 
   position: absolute;
   top: -4px;
   left: 0;
+
+  background-image: url(../img/radio-off.svg);
 }
 
 .filter-input-radio:checked + label::before {
-  content: url(../img/radio-on.svg);
+  content: '';
+
+  background-image: url(../img/radio-on.svg);
 }
 
 .filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before,
-.filter-input-radio + label:hover::before,
-.filter-input-radio + label:focus::before {
+.filter-input-radio + label:hover::before {
   opacity: 0.6;
 }
 
@@ -1287,6 +1323,12 @@ img {
 .filter-input-checkbox:disabled + label::before,
 .filter-input-radio:disabled + label::before {
   opacity: 0.25;
+}
+
+.filter-input-checkbox:focus + label::before,
+.filter-input-radio:focus + label::before {
+  opacity: 0.6;
+  outline: auto;
 }
 
 .filters .button {
@@ -1771,17 +1813,17 @@ img {
 .page-footer .logo:focus,
 .footer-site-navigation a:hover,
 .footer-site-navigation a:focus,
-.telephone:hover,
-.telephone:focus,
-.developer:hover,
-.developer:focus {
+.telephone a:hover,
+.telephone a:focus,
+.developer a:hover::before,
+.developer a:focus::before {
   opacity: 0.6;
 }
 
 .page-footer .logo:active,
 .footer-site-navigation a:active,
-.telephone:active,
-.developer:active {
+.telephone a:active,
+.developer a:active::before {
   opacity: 0.3;
 }
 
@@ -1803,37 +1845,50 @@ img {
   margin-right: 0;
 }
 
-.social-button {
+.social-button::before {
   opacity: 0.3;
 }
 
-.social-button:hover,
-.social-button:focus {
+.social-button:hover::before,
+.social-button:focus::before {
   opacity: 0.6;
 }
 
-.social-button:active {
+.social-button:active::before {
   opacity: 0.1;
 }
 
+.social-button::before {
+  content: '';
+  width: 32px;
+  height: 32px;
+
+  display: block;
+}
+
 .social-facebook::before {
-  content: url(../img/facebook.svg);
+  background-image: url(../img/facebook.svg);
 }
 
 .social-instagram::before {
-  content: url(../img/instagram.svg);
+  background-image: url(../img/instagram.svg);
 }
 
 .social-twitter::before {
-  content: url(../img/twitter.svg);
+  background-image: url(../img/twitter.svg);
 }
 
-.developer {
-  text-align: right;
-}
+.developer a::before {
+  content: '';
 
-.developer::before {
-  content: url(../img/logo-html.svg);
+  width: 27px;
+  height: 34px;
+
+  display: block;
+
+  background-image: url(../img/logo-html.svg);
+
+  float: right;
 }
 
 /*Feedback*/
