@@ -53,7 +53,7 @@
 
     <main>
       <div class="container">
-        <h1 class="headline">Моноподы для селфи</h1>
+        <h1 class="headline page-caption">Моноподы для селфи</h1>
 
         <ul class="breadcrumbs">
           <li><a href="index.html">Главная</a></li>
@@ -64,25 +64,31 @@
 
       <div class="catalog-container">
         <section class="filters">
-          <div class="filters-caption-container clearfix">
+          <div class="filters-caption-container">
             <h2>Фильтр:</h2>
           </div>
 
-          <div class="filters-form-container clearfix">
+          <div class="filters-form-container">
             <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
               <fieldset>
                 <legend>Стоимость</legend>
+                <div class="range-controls">
+                  <div class="scale"></div>
+                  <div class="bar" style="width: 80%; margin-left: 10%"></div>
+                  <div class="toggle toggle-min" tabindex="1" style="left: 10%"></div>
+                  <div class="toggle toggle-max" tabindex="1" style="right: 10%"></div>
+                </div>
 
-                <!-- Здесь будет блок с ползунками -->
-
-                <p>
-                  <label for="filter-min-cost">от</label>
-                  <input type="text" name="min-cost" value="0" id="filter-min-cost">
-                </p>
-                <p>
-                  <label for="filter-max-cost">до</label>
-                  <input type="text" name="max-cost" value="5 000" id="filter-max-cost">
-                </p>
+                <div class="number-controls">
+                  <p>
+                    <label for="filter-min-cost">от</label>
+                    <input class="filter-input-number" type="number" name="min-cost" value="0" id="filter-min-cost">
+                  </p>
+                  <p>
+                    <label for="filter-max-cost">до</label>
+                    <input class="filter-input-number" type="number" name="max-cost" value="5000" id="filter-max-cost">
+                  </p>
+                </div>
               </fieldset>
 
               <fieldset>
@@ -115,11 +121,11 @@
                 <legend>Bluetooth</legend>
                 <ul>
                   <li>
-                    <input class="filter-input-radio" type="radio" name="bluetooth-yes" id="filter-bluetooth-yes">
+                    <input class="filter-input-radio" type="radio" name="bluetooth" id="filter-bluetooth-yes" checked>
                     <label for="filter-bluetooth-yes">Есть</label>
                   </li>
                   <li>
-                    <input class="filter-input-radio" type="radio" name="bluetooth-no" id="filter-bluetooth-no">
+                    <input class="filter-input-radio" type="radio" name="bluetooth" id="filter-bluetooth-no">
                     <label for="filter-bluetooth-no">Нет</label>
                   </li>
                 </ul>
@@ -143,12 +149,12 @@
               </ul>
 
               <ul class="sort-directions">
-                <li>
+                <li class="sort-direction-up">
                   <a href="selfiemonopods-bycost-descending.html">
                     <span class="visually-hidden">По убыванию</span>
                   </a>
                 </li>
-                <li>
+                <li class="sort-direction-down active-direction">
                   <a>
                     <span class="visually-hidden">По возрастанию</span>
                   </a>
@@ -160,60 +166,78 @@
           <div class="products-container">
             <ul class="products-list">
               <li>
-                <article>
-                  <img src="img/selfiestick-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
-
-                  <a class="product-name-link" href="selfiestick-amateur.html">
-                    <h3>Любительская селфи-палка</h3>
-                  </a>
-                  <p class="product-price">500 pуб</p>
-
-                  <button class="button" type="button">В корзину</button>
-                  <button class="compare-button" type="button">Добавить к сравнению</button>
+                <article class="product" tabindex="0">
+                  <div class="product-image">
+                    <img src="img/selfiestick-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
+                    <div class="product-action">
+                      <button class="button" type="button">В корзину</button>
+                      <button class="compare-button" type="button">Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="product-description">
+                    <a class="product-name-link" href="selfiestick-amateur.html">
+                      <h3>Любительская селфи-палка</h3>
+                    </a>
+                    <p class="product-price">500 pуб.</p>
+                  </div>
                 </article>
               </li>
               <li>
-                <article>
-                  <img src="img/selfiestick-pro.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
-
-                  <a class="product-name-link" href="selfiestick-pro.html">
-                    <h3>Профессиональная селфи-палка</h3>
-                  </a>
-                  <p class="product-price">1 500 pуб</p>
-
-                  <button class="button" type="button">В корзину</button>
-                  <button class="compare-button" type="button">Добавить к сравнению</button>
+                <article class="product" tabindex="0">
+                  <div class="product-image">
+                    <img src="img/selfiestick-pro.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
+                    <div class="product-action">
+                      <button class="button" type="button">В корзину</button>
+                      <button class="compare-button" type="button">Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="product-description">
+                    <a class="product-name-link" href="selfiestick-pro.html">
+                      <h3>Профессиональная<br>селфи-палка</h3>
+                    </a>
+                    <p class="product-price">1 500 pуб.</p>
+                  </div>
                 </article>
               </li>
               <li>
-                <article>
-                  <img src="img/selfiestick-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
-
-                  <a class="product-name-link" href="selfiestick-unsinkable.html">
-                    <h3>Непотопляемая селфи-палка</h3>
-                  </a>
-                  <p class="product-price">2 500 pуб</p>
-
-                  <button class="button" type="button">В корзину</button>
-                  <button class="compare-button" type="button">Добавить к сравнению</button>
+                <article class="product" tabindex="0">
+                  <div class="product-image">
+                    <img src="img/selfiestick-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
+                    <div class="product-action">
+                      <button class="button" type="button">В корзину</button>
+                      <button class="compare-button" type="button">Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="product-description">
+                    <a class="product-name-link" href="selfiestick-unsinkable.html">
+                      <h3>Непотопляемая<br>селфи-палка</h3>
+                    </a>
+                    <p class="product-price">2 500 pуб.</p>
+                  </div>
                 </article>
               </li>
               <li>
-                <article>
-                  <img src="img/selfiestick-followme.jpg" width="360" height="380" alt="Cелфи-палка «Следуй за мной»">
-
-                  <a class="product-name-link" href="selfiestick-followme.html">
-                    <h3>Cелфи-палка «Следуй за мной»</h3>
-                  </a>
-                  <p class="product-price">4 900 pуб</p>
-
-                  <button class="button" type="button">В корзину</button>
-                  <button class="compare-button" type="button">Добавить к сравнению</button>
+                <article class="product new" tabindex="0">
+                  <div class="product-image">
+                    <img src="img/selfiestick-followme.jpg" width="360" height="380" alt="Cелфи-палка «Следуй за мной»">
+                    <div class="product-action">
+                      <button class="button" type="button">В корзину</button>
+                      <button class="compare-button" type="button">Добавить к сравнению</button>
+                    </div>
+                  </div>
+                  <div class="product-description">
+                    <a class="product-name-link" href="selfiestick-followme.html">
+                      <h3>Cелфи-палка «Следуй за<br>мной»</h3>
+                    </a>
+                    <p class="product-price">4 900 pуб.</p>
+                  </div>
                 </article>
               </li>
             </ul>
+          </div>
 
-            <!-- Пагинация -->
+          <!-- Пагинация -->
+          <div class="paginator-container">
             <div class="pagination">
               <a class="pagination-direction">Назад</a>
               <ul>
