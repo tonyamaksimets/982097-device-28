@@ -202,6 +202,10 @@ img {
   border-bottom: 1px solid var(--special-yellow);
 }
 
+.main-navigation-inner {
+  padding-bottom: 30px;
+}
+
 .main-navigation .logo {
   width: 163px;
 
@@ -219,7 +223,7 @@ img {
   height: 33px;
   width: 440px;
 
-  margin-right: 96px;
+  margin-right: 98px;
   padding-top: 15px;
 
   display: inline-block;
@@ -242,8 +246,8 @@ img {
   display: block;
 
   position: absolute;
-  left: 0;
-  top: 17px;
+  left: 1px;
+  top: 19px;
 
   background-image: url(../img/search.svg);
   background-repeat: no-repeat;
@@ -252,7 +256,7 @@ img {
 .search-form input {
   height: 20px;
 
-  padding-left: 40px;
+  padding-left: 39px;
 
   background-color: var(--special-yellow);
 
@@ -261,6 +265,10 @@ img {
 }
 
 .search-input-text::placeholder {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
   color: var(--basic-black);
 
   opacity: 0.3;
@@ -326,7 +334,7 @@ img {
 }
 
 .user-navigation {
-  width: 500px;
+  width: 498px;
 
   margin: 0;
   padding: 0;
@@ -337,7 +345,7 @@ img {
 }
 
 .user-navigation li {
-  margin-left: 40px;
+  margin-left: 43px;
 }
 
 .user-navigation .authorization-item {
@@ -361,12 +369,8 @@ img {
 }
 
 .user-navigation button {
-  font-family: 'OpenSans', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 15px;
-  line-height: 20px;
-  color: var(--basic-black);
+  margin-left: 15px;
+  padding: 0;
 
   border: none;
   background-color: var(--special-yellow);
@@ -395,11 +399,11 @@ img {
 }
 
 .site-navigation > li {
-  margin-left: 38px;
+  margin-left: 34px;
 }
 
 .site-navigation > li:last-child {
-  margin-left: 100px;
+  margin-left: 104px;
 }
 
 .site-navigation .catalog-item {
@@ -412,7 +416,7 @@ img {
 .catalog-item::after {
   content: url(../img/plus.svg);
 
-  margin-left: 12px;
+  margin-left: 14px;
 
   opacity: 0.3;
 
@@ -428,6 +432,10 @@ img {
   letter-spacing: 0.2em;
 }
 
+.catalog-item > a {
+  letter-spacing: 0.1em;
+}
+
 .sub-site-navigation {
   display: none;
 }
@@ -438,7 +446,9 @@ img {
   width: 1040px;
 
   margin: 0;
-  padding: 29px 60px;
+  padding: 0 60px;
+  padding-top: 29px;
+  padding-bottom: 26px;
 
   display: flex;
   flex-direction: column;
@@ -455,7 +465,7 @@ img {
 
 .sub-site-navigation li {
   margin-bottom: 16px;
-  margin-right: 61px;
+  margin-right: 64px;
 }
 
 .sub-site-navigation li:last-child {
@@ -476,7 +486,7 @@ img {
 .promo-slider ul {
   margin: 0;
   padding: 0;
-  padding-bottom: 76px;
+  padding-bottom: 58px;
 
   list-style: none;
 }
@@ -486,7 +496,7 @@ img {
 
   counter-reset: slide-list;
 
-  background-image: linear-gradient(var(--special-yellow) 147px, var(--basic-white) 147px);
+  background-image: linear-gradient(var(--special-yellow) 145px, var(--basic-white) 145px);
 }
 
 .slide {
@@ -505,8 +515,8 @@ img {
   content: '0'counter(slide-list);
 
   position: absolute;
-  top: 20px;
-  right: 47px;
+  top: 17px;
+  right: 52px;
   z-index: 0;
 
   font-family: Gilroy;
@@ -536,23 +546,23 @@ img {
 }
 
 .slide:nth-child(1) img {
-  top: 17px;
+  top: 15px;
   left: 89px;
 }
 
 .slide:nth-child(2) img {
-  top: 43px;
+  top: 41px;
   left: 116px;
 }
 
 .slide:nth-child(3) img {
-  top: 99px;
+  top: 97px;
   left: 30px;
 }
 
 .slide .headline {
-  margin-top: 110px;
-  margin-bottom: 30px;
+  margin-top: 108px;
+  margin-bottom: 26px;
 
   position: relative;
 }
@@ -566,7 +576,7 @@ img {
   display: block;
 
   position: absolute;
-  top: -52px;
+  top: -59px;
 
   background-color: var(--basic-white);
 }
@@ -580,23 +590,27 @@ img {
 .slide .button {
   width: 220px;
 
-  margin: 60px 0;
+  margin: 50px 0;
 }
 
 .slide table {
   border-collapse: collapse;
+}
+
+.slide td {
+  padding-right: 60px;
 
   font-family: Gilroy;
   font-weight: 300;
   letter-spacing: 0.1em;
 }
 
-.slide td {
-  padding-right: 65px;
-}
-
 .slide td:last-child {
   padding-right: 0;
+}
+
+.slide:nth-child(3) td {
+  padding-right: 24px;
 }
 
 .slide-table-value {
@@ -619,8 +633,8 @@ img {
   justify-content: space-between;
 
   position: absolute;
-  bottom: 137px;
-  right: 111px;
+  bottom: 138px;
+  right: 128px;
   z-index: 1;
 }
 
@@ -736,7 +750,7 @@ img {
 }
 
 .fitnesstrackers svg {
-  margin-top: 46px;
+  margin-top: 48px;
 }
 
 .smartwatches svg {
@@ -783,8 +797,8 @@ img {
 .services .services-tabs {
   width: 277px;
 
-  padding: 80px 0;
-  padding-left: 40px;
+  padding-top: 80px;
+  padding-bottom: 55px;
 
   display: flex;
   flex-direction: column;
@@ -793,7 +807,7 @@ img {
 }
 
 .services-tabs li {
-  margin-bottom: 21px;
+  margin-bottom: 22px;
 }
 
 .services-tabs li::last-child {
@@ -815,7 +829,7 @@ img {
 }
 
 .services-descriptions {
-  width: 758px;
+  width: 760px;
 }
 
 .services-descriptions li {
@@ -833,23 +847,23 @@ img {
 
   position: absolute;
   top: 0;
-  right: 0;
+  right: 2px;
 }
 
 .warranty::before {
   content: url(../img/warranty.svg);
 
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -17px;
+  right: -16px;
 }
 
 .credit::before {
   content: url(../img/credit.svg);
 
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -22px;
+  right: 8px;
 }
 
 .service-caption {
@@ -861,14 +875,19 @@ img {
   width: 575px;
 
   margin: 0;
-  margin-bottom: 49px;
 
   letter-spacing: 0.1em;
 }
 
+.warranty p {
+  line-height: 30px;
+}
+
 /*Partners*/
 .partners ul {
-  margin: 90px 0;
+  margin: 0;
+  margin-top: 90px;
+  margin-bottom: 82px;
   padding: 0;
 
   display: flex;
@@ -879,11 +898,20 @@ img {
 
 .partners li {
   width: 300px;
+
+  text-align: center;
 }
 
-.partners li:nth-child(4n + 1),
+.partners li:nth-child(4n + 1) {
+  width: 260px;
+
+  padding-right: 20px;
+}
+
 .partners li:nth-child(4n) {
-  width: 280px;
+  width: 260px;
+
+  padding-left: 20px;
 }
 
 .partner:nth-child(1) a::before {
@@ -897,6 +925,8 @@ img {
 .partner:nth-child(2) a::before {
   content: url(../img/colorlogo-spgadgets.png);
 
+  margin-left: 20px;
+
   display: none;
 
   position: absolute;
@@ -904,6 +934,8 @@ img {
 
 .partner:nth-child(3) a::before {
   content: url(../img/colorlogo-gopro.png);
+
+  margin-left: 20px;
 
   display: none;
 
@@ -925,12 +957,18 @@ img {
 /*Info&Contacts*/
 .info,
 .contacts {
-  width: 560px;
-  box-sizing: border-box;
-
-  padding-bottom: 117px;
+  margin-bottom: 77px;
+  padding-bottom: 70px;
 
   position: relative;
+}
+
+.info {
+  width: 473px;
+}
+
+.contacts {
+  width: 560px;
 }
 
 .info::before,
@@ -947,7 +985,9 @@ img {
 
 .info h2,
 .contacts h2 {
-  margin: 50px 0;
+  margin: 0;
+  margin-top: 50px;
+  margin-bottom: 40px;
 }
 
 .info p,
@@ -962,7 +1002,7 @@ img {
 
 .info-list {
   margin: 0;
-  margin-bottom: 75px;
+  margin-bottom: 40px;
   padding: 0;
 
   font-family: 'Gilroy';
@@ -973,7 +1013,7 @@ img {
 }
 
 .info-list li {
-  margin-bottom: 20px;
+  margin-bottom: 14px;
   padding-left: 32px;
 
   position: relative;
@@ -1008,14 +1048,14 @@ img {
   width: 260px;
 
   position: absolute;
-  bottom: 77px;
+  bottom: 0px;
 }
 
 /*Page-caption*/
 .page-caption {
   margin-top: 44px;
   margin-right: 60px;
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   margin-left: 60px;
 }
 
@@ -1025,7 +1065,7 @@ img {
   padding: 0;
   padding-left: 60px;
   padding-right: 60px;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 
   display: flex;
   flex-wrap: wrap;
@@ -1035,7 +1075,7 @@ img {
 
 .breadcrumbs li {
   margin-left: 16px;
-  padding-right: 32px;
+  padding-right: 26px;
 
   position: relative;
 }
@@ -1110,9 +1150,9 @@ img {
 }
 
 .filters-form {
-  width: 200px;
+  width: 204px;
 
-  margin-right: 68px;
+  margin-right: 66px;
   margin-top: 70px;
   margin-bottom: 70px;
 
@@ -1143,11 +1183,19 @@ img {
   border: none;
 }
 
+.color-filters ul {
+  margin-bottom: 3px;
+}
+
+.bluetooth-filters ul {
+  margin-bottom: 7px;
+}
+
 .filters-form legend {
   width: 100%;
 
   padding-top: 14px;
-  margin-bottom: 30px;
+  margin-bottom: 32px;
 
   display: block;
 
@@ -1164,6 +1212,7 @@ img {
   width: 180px;
 
   margin-left: 10px;
+  padding-top: 7px;
 
   position: relative;
 }
@@ -1180,7 +1229,7 @@ img {
   height: 2px;
 
   position: absolute;
-  top: 0;
+  bottom: 0;
   z-index: 1;
 
   background-color: var(--special-green);
@@ -1191,7 +1240,7 @@ img {
   height: 20px;
 
   position: absolute;
-  top: -9px;
+  bottom: -9px;
   z-index: 3;
 
   background-color: var(--basic-white);
@@ -1266,7 +1315,6 @@ img {
 .filter-input-radio:disabled + label {
   color: var(--filter-gray-dark);
 }
-
 
 .filter-input-checkbox + label::before {
   content: '';
@@ -1477,7 +1525,7 @@ img {
 }
 
 .product-image {
-  margin-bottom: 26px;
+  margin-bottom: 22px;
 
   position: relative;
 }
@@ -1538,23 +1586,12 @@ img {
   justify-content: space-between;
 }
 
-.product-name-link {
-  width: 275px;
-
-  font-family: Gilroy;
-  font-weight: 800;
-  font-size: 16px;
-  line-height: 22px;
-  letter-spacing: 0.05em;
-  color: var(--basic-black);
-}
-
 .product-name-link h3 {
   margin: 0;
 
   font-family: Gilroy;
   font-weight: 800;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 22px;
   letter-spacing: 0.05em;
   color: var(--basic-black);
@@ -1571,6 +1608,7 @@ img {
 
 .product-price {
   margin: 0;
+  margin-left: 4px;
 
   font-family: Gilroy;
   font-weight: 300;
@@ -1609,6 +1647,8 @@ img {
 }
 
 .pagination ul {
+  margin-left: 7px;
+
   list-style: none;
 
   display: flex;
@@ -1660,7 +1700,7 @@ img {
 }
 
 .page-footer .container {
-  padding-top: 46px;
+  padding-top: 45px;
   padding-bottom: 69px;
 
   display: grid;
@@ -1673,7 +1713,7 @@ img {
   width: 80px;
   height: 7px;
 
-  margin-top: 15px;
+  margin-top: 14px;
 
   display: block;
 
@@ -1704,7 +1744,7 @@ img {
 }
 
 .footer-user-navigation li {
-  margin-left: 35px;
+  margin-left: 42px;
 }
 
 .footer-user-navigation:last-child {
@@ -1728,6 +1768,9 @@ img {
 }
 
 .footer-user-navigation button {
+  margin-left: 15px;
+  padding: 0;
+
   font-family: 'OpenSans', Arial, sans-serif;
   font-style: normal;
   font-weight: 300;
@@ -1792,13 +1835,13 @@ img {
   font-family: 'Gilroy';
   font-weight: 800;
   font-size: 18px;
-  line-height: 22px;
+  line-height: 20px;
   text-transform: uppercase;
   letter-spacing: 0.2em;
 }
 
 .footer-site-navigation li {
-  margin-right: 36px;
+  margin-right: 33px;
 }
 
 .footer-site-navigation li:last-child {
@@ -1995,6 +2038,8 @@ img {
 
 .feedback-form .button {
   width: 200px;
+
+  margin-top: 6px;
 }
 
 .feedback .button-close {
