@@ -1,9 +1,9 @@
 var modalMapLink = document.querySelector('.modal-map-link');
-var modalMap = document.querySelector('.map-modal');
+var modalMap = document.querySelector('.modal-map');
 var modalMapClose = modalMap.querySelector('.button-close');
 
 var modalFeedbackLink = document.querySelector('.modal-feedback-link');
-var modalFeedback = document.querySelector('.feedback');
+var modalFeedback = document.querySelector('.modal-feedback');
 var modalFeedbackClose = modalFeedback.querySelector('.button-close');
 var feedbackName = modalFeedback.querySelector('.feedback-field-name');
 var feedbackEmail = modalFeedback.querySelector('.feedback-field-email');
