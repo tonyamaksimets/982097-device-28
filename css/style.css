@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /*Fonts*/
 @font-face {
   font-family: 'Gilroy';
@@ -105,6 +112,7 @@ img {
   min-height: 100%;
 
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
 }
 
@@ -267,6 +275,26 @@ img {
   outline: none;
 }
 
+.search-input-text::-webkit-input-placeholder {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+
+  opacity: 0.3;
+}
+
+.search-input-text::-moz-placeholder {
+  font-family: 'OpenSans', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 20px;
+  color: var(--basic-black);
+
+  opacity: 0.3;
+}
+
 .search-input-text::placeholder {
   font-family: 'OpenSans', Arial, sans-serif;
   font-weight: 300;
@@ -277,8 +305,24 @@ img {
   opacity: 0.3;
 }
 
+.search-input-text:hover::-webkit-input-placeholder {
+  opacity: 0.6;
+}
+
+.search-input-text:hover::-moz-placeholder {
+  opacity: 0.6;
+}
+
 .search-input-text:hover::placeholder {
   opacity: 0.6;
+}
+
+.search-input-text:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.search-input-text:focus::-moz-placeholder {
+  opacity: 1;
 }
 
 .search-input-text:focus::placeholder {
@@ -648,7 +692,7 @@ img {
 
   display: flex;
   justify-content: flex-end;
-  flex-wrap: flex;
+  flex-wrap: wrap;
 
   position: absolute;
   bottom: 198px;
@@ -831,7 +875,7 @@ img {
   margin-bottom: 22px;
 }
 
-.services-tabs li::last-child {
+.services-tabs li:last-child {
   margin-bottom: 0;
 }
 
@@ -1527,7 +1571,8 @@ img {
 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
   row-gap: 48px;
 }
 
@@ -1973,7 +2018,8 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 32px;
-  column-gap: 40px;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
 
   position: relative;
 }
@@ -2016,6 +2062,22 @@ img {
 
   border: none;
   outline: none;
+}
+
+.feedback-form input::-webkit-input-placeholder, .feedback-form textarea::-webkit-input-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: var(--feedback-black-transparent);
+}
+
+.feedback-form input::-moz-placeholder, .feedback-form textarea::-moz-placeholder {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: var(--feedback-black-transparent);
 }
 
 .feedback-form input::placeholder,
@@ -2091,11 +2153,14 @@ img {
 .open-modal {
   display: block;
 
-  animation: floating 0.6s;
+  -webkit-animation: floating 0.6s;
+
+          animation: floating 0.6s;
 }
 
 .error-modal {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
 }
 
 .button-close {
@@ -2132,6 +2197,19 @@ img {
 }
 
 /*Animation*/
+@-webkit-keyframes floating {
+  0% {
+    transform: scaleY(0.2);
+  }
+
+  20% {
+    transform: scaleY(0.2);
+  }
+
+  100% {
+    transform: scaleY(1);
+  }
+}
 @keyframes floating {
   0% {
     transform: scaleY(0.2);
@@ -2143,6 +2221,20 @@ img {
 
   100% {
     transform: scaleY(1);
+  }
+}
+
+@-webkit-keyframes shake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+
+  20%, 60% {
+    transform: translateX(10px);
+  }
+
+  40%, 80% {
+    transform: translateX(-10px);
   }
 }
 
