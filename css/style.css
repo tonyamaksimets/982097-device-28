@@ -162,12 +162,24 @@ img {
   position: relative;
 
   background-color: var(--basic-transparent);
-  background-image: url(../img/button.svg);
-  background-position: 40%;
-  background-repeat: repeat no-repeat;
 
   border: none;
   outline: none;
+}
+
+.button::before {
+  content: '';
+
+  width: 100%;
+  height: 8px;
+
+  display: block;
+
+  position: absolute;
+  top: 16px;
+  z-index: -1;
+
+  background-color: var(--special-yellow-dark);
 }
 
 .button:hover,
@@ -183,8 +195,8 @@ img {
   background-image: none;
 }
 
-.button-light {
-  background-image: url(../img/button-light.svg);
+.button-light::before {
+  background-color: var(--special-yellow);
 }
 
 .button-light:hover,
