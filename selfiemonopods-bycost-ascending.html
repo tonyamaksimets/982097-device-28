@@ -8,7 +8,7 @@
   </head>
   <body class="page-body">
     <header class="page-header container">
-      <nav class="main-navigation main-navigation-inner">
+      <nav class="main-navigation">
         <a class="logo" href="index.html" aria-label="На главную">
           <img src="img/logo-device.svg" width="163" height="35" alt="Логотип магазина электроники «Device»">
         </a>
@@ -74,9 +74,9 @@
                 <legend>Стоимость</legend>
                 <div class="range-controls">
                   <div class="scale"></div>
-                  <div class="bar" style="width: 80%; margin-left: 10%"></div>
-                  <div class="toggle toggle-min" tabindex="0" style="left: 10%"></div>
-                  <div class="toggle toggle-max" tabindex="0" style="right: 10%"></div>
+                  <div class="bar" style="width: 62%; margin-left: 0%"></div>
+                  <div class="toggle toggle-min" tabindex="0" style="left: 0%"></div>
+                  <div class="toggle toggle-max" tabindex="0" style="right: 38%"></div>
                 </div>
 
                 <div class="number-controls">
@@ -165,7 +165,7 @@
 
           <div class="products-container">
             <ul class="products-list">
-              <li>
+              <li class="product-item">
                 <article class="product" tabindex="0">
                   <div class="product-image">
                     <img src="img/selfiestick-amateur.jpg" width="360" height="380" alt="Любительская селфи-палка">
@@ -182,7 +182,7 @@
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="product-item">
                 <article class="product" tabindex="0">
                   <div class="product-image">
                     <img src="img/selfiestick-pro.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
@@ -199,7 +199,7 @@
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="product-item">
                 <article class="product" tabindex="0">
                   <div class="product-image">
                     <img src="img/selfiestick-unsinkable.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
@@ -210,13 +210,13 @@
                   </div>
                   <div class="product-description">
                     <a class="product-name-link" href="#">
-                      <h3>Непотопляемая<br>селфи-палка</h3>
+                      <h3>Непотопляемая селфи-палка</h3>
                     </a>
                     <p class="product-price">2 500 pуб.</p>
                   </div>
                 </article>
               </li>
-              <li>
+              <li class="product-item">
                 <article class="product new" tabindex="0">
                   <div class="product-image">
                     <img src="img/selfiestick-followme.jpg" width="360" height="380" alt="Cелфи-палка «Следуй за мной»">
@@ -279,7 +279,9 @@
           <li><a href="#">Контакты</a></li>
         </ul>
 
-        <a class="telephone" href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        <div class="telephone">
+          <a href="tel:+74954959595">Тел.: +7 (495) 495-95-95</a>
+        </div>
 
         <ul class="social">
           <li>
@@ -299,9 +301,11 @@
           </li>
         </ul>
 
-        <a class="developer" href="https://htmlacademy.ru/intensive/htmlcss">
-          <span class="visually-hidden">HTML Academy</span>
-        </a>
+        <div class="developer">
+          <a href="https://htmlacademy.ru/intensive/htmlcss">
+            <span class="visually-hidden">HTML Academy</span>
+          </a>
+        </div>
       </div>
     </footer>
 
