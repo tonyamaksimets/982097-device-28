@@ -74,7 +74,7 @@
 
 /*Global*/
 body {
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Arial', sans-serif;
   font-style: normal;
   font-weight: 300;
   font-size: 15px;
@@ -131,7 +131,7 @@ img {
 
 /*Headline*/
 .headline {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 47px;
   line-height: 58px;
@@ -153,7 +153,7 @@ img {
   position: relative;
   z-index: 2;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -296,7 +296,7 @@ img {
 }
 
 .search-input-text::-webkit-input-placeholder {
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -306,7 +306,7 @@ img {
 }
 
 .search-input-text::-moz-placeholder {
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -316,7 +316,7 @@ img {
 }
 
 .search-input-text::placeholder {
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -498,7 +498,7 @@ img {
 }
 
 .site-navigation-item > a {
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -597,7 +597,7 @@ img {
   right: 52px;
   z-index: 0;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 179px;
   line-height: 179px;
@@ -682,7 +682,7 @@ img {
 .slide td {
   padding-right: 60px;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 300;
   letter-spacing: 0.1em;
 }
@@ -775,7 +775,7 @@ img {
   justify-content: space-around;
   flex-wrap: wrap;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1073,7 +1073,7 @@ img {
   margin-bottom: 40px;
   padding: 0;
 
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 16px;
 
@@ -1214,7 +1214,7 @@ img {
 
   float: right;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1247,7 +1247,7 @@ img {
 
   display: block;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 14px;
   line-height: 17px;
@@ -1358,7 +1358,7 @@ img {
 
   display: flex;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 14px;
   line-height: 16px;
@@ -1482,7 +1482,7 @@ img {
 .sort p {
   margin: 0;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1670,7 +1670,7 @@ img {
 .product-name-link h3 {
   margin: 0;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
@@ -1691,7 +1691,7 @@ img {
   margin: 0;
   margin-left: 4px;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 22px;
@@ -1721,7 +1721,7 @@ img {
   display: flex;
   justify-content: space-between;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 16px;
   line-height: 20px;
@@ -1859,7 +1859,7 @@ img {
   margin-left: 15px;
   padding: 0;
 
-  font-family: 'OpenSans', Arial, sans-serif;
+  font-family: 'OpenSans', 'Arial', sans-serif;
   font-weight: 300;
   font-size: 15px;
   line-height: 20px;
@@ -1922,7 +1922,7 @@ img {
   justify-content: center;
   flex-wrap: wrap;
 
-  font-family: 'Gilroy';
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
   text-transform: uppercase;
@@ -2069,7 +2069,7 @@ img {
 
   display: block;
 
-  font-family: Gilroy;
+  font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: 800;
   font-size: 18px;
   line-height: 22px;
